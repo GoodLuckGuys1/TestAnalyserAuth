@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnalyserAuth.Api", "TestAnalyserAuth.Api\TestAnalyserAuth.Api.csproj", "{7CB57EAD-0B21-47C7-A3D0-751B1DE70535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnalyserAuth.IdentityServer", "TestAnalyserAuth.IdentityServer\TestAnalyserAuth.IdentityServer.csproj", "{31CD71FF-DD43-4AA2-99C7-3261BCF7ED57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnalyserAuth.Domain", "TestAnalyserAuth.Domain\TestAnalyserAuth.Domain.csproj", "{D1EDE743-FD91-47F3-BC57-CBDDCE812965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAnalyserAuth.Infrastructure", "TestAnalyserAuth.Infrastructure\TestAnalyserAuth.Infrastructure.csproj", "{64FB8E02-E411-4C5C-86E2-A76B999C0DC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CB57EAD-0B21-47C7-A3D0-751B1DE70535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB57EAD-0B21-47C7-A3D0-751B1DE70535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB57EAD-0B21-47C7-A3D0-751B1DE70535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB57EAD-0B21-47C7-A3D0-751B1DE70535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CD71FF-DD43-4AA2-99C7-3261BCF7ED57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CD71FF-DD43-4AA2-99C7-3261BCF7ED57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CD71FF-DD43-4AA2-99C7-3261BCF7ED57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CD71FF-DD43-4AA2-99C7-3261BCF7ED57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EDE743-FD91-47F3-BC57-CBDDCE812965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EDE743-FD91-47F3-BC57-CBDDCE812965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EDE743-FD91-47F3-BC57-CBDDCE812965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EDE743-FD91-47F3-BC57-CBDDCE812965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FB8E02-E411-4C5C-86E2-A76B999C0DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FB8E02-E411-4C5C-86E2-A76B999C0DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FB8E02-E411-4C5C-86E2-A76B999C0DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FB8E02-E411-4C5C-86E2-A76B999C0DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
