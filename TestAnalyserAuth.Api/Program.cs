@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Security.Claims;
 using TestAnalyserAuth;
+using TestAnalyserAuth.Domain.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,6 +60,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
         };
     });
+
+builder.Services.AddAuthorization(opts => {
+
+    opts.AddPolicy("OnlyPaid", policy => {
+        policy.RequireClaim(CustomClaimTypes.PAYMENT_PLAN, "paid");
+    });
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
