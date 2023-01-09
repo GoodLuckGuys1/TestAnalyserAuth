@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using TestAnalyserAuth.Domain.Entity;
+using TestAnalyserAuth.Domain.Security;
 
 namespace TestAnalyserAuth;
 
@@ -18,6 +19,7 @@ public class AccountController : Controller
         };
 
         [Authorize (AuthenticationSchemes ="Bearer")]
+        [Authorize(Policy = "OnlyPaid")]
         [HttpGet("/myRole")]
         public string? GetRole()
         {
@@ -60,7 +62,9 @@ public class AccountController : Controller
             var claims = new List<Claim>
             {
                 new(ClaimsIdentity.DefaultNameClaimType, person.Login),
-                new(ClaimsIdentity.DefaultRoleClaimType, person.Role)
+                new(ClaimsIdentity.DefaultRoleClaimType, person.Role),
+                new(CustomClaimTypes.PAYMENT_PLAN, "paid")
+
             };
             var claimsIdentity =
                 new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,
